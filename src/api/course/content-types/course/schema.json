@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "singularName": "course",
+    "pluralName": "courses",
+    "displayName": "Course",
+    "description": "Courses offered on the platform"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "instructor": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "decimal",
+      "default": 4.8
+    },
+    "students": {
+      "type": "integer",
+      "default": 0
+    },
+    "price": {
+      "type": "decimal",
+      "default": 0
+    },
+    "originalPrice": {
+      "type": "decimal",
+      "default": 0
+    },
+    "discountedPrice": {
+      "type": "decimal"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": ["Beginner", "Intermediate", "Advanced"],
+      "default": "Beginner"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "badge": {
+      "type": "string"
+    },
+    "badgeColor": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "json"
+    },
+    "lessons": {
+      "type": "integer",
+      "default": 0
+    },
+    "certificate": {
+      "type": "boolean",
+      "default": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category"
+    }
+  }
+}

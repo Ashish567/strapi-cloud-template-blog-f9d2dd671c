@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learning_paths",
+  "info": {
+    "singularName": "learning-path",
+    "pluralName": "learning-paths",
+    "displayName": "Learning Path",
+    "description": "Guided learning journeys"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "courses": {
+      "type": "integer"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "json"
+    }
+  }
+}

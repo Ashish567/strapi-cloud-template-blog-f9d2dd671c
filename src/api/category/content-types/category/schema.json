@@ -15,6 +15,16 @@
     "name": {
       "type": "string"
     },
+    "icon": {
+      "type": "string"
+    },
+    "count": {
+      "type": "integer",
+      "default": 0
+    },
+    "color": {
+      "type": "string"
+    },
     "slug": {
       "type": "uid"
     },

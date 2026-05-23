@@ -1,5 +1,5 @@
 {
-  "name": "my-app-name",
+  "name": "corse-web",
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
@@ -7,6 +7,7 @@
     "build": "strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
+    "seed:elearning": "node ./scripts/seed-elearning.js",
     "seed:example": "node ./scripts/seed.js",
     "start": "strapi start",
     "strapi": "strapi"
