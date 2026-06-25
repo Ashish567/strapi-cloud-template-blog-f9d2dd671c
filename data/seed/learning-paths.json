@@ -1,0 +1,8 @@
+[
+  { "title": "AI Engineer", "description": "From Python basics to deploying production ML models", "courses": 8, "duration": "6 months", "icon": "🤖", "color": "#1D4ED8", "steps": ["Python Fundamentals", "Mathematics for ML", "ML Algorithms", "Deep Learning", "MLOps"] },
+  { "title": "Full Stack Developer", "description": "Build modern web applications from frontend to backend", "courses": 10, "duration": "8 months", "icon": "💻", "color": "#059669", "steps": ["HTML/CSS", "JavaScript", "React", "Node.js", "Database Design", "Deployment"] },
+  { "title": "Robotics Engineer", "description": "Design and build intelligent autonomous systems", "courses": 7, "duration": "7 months", "icon": "🦾", "color": "#7C3AED", "steps": ["Electronics Basics", "Arduino", "Python Robotics", "ROS Framework", "Computer Vision"] },
+  { "title": "Data Scientist", "description": "Extract insights and build predictive models from data", "courses": 9, "duration": "7 months", "icon": "📊", "color": "#DC2626", "steps": ["Statistics", "Python", "Data Wrangling", "ML Models", "Data Visualization", "Big Data"] },
+  { "title": "Cloud Engineer", "description": "Learn deployment, automation, containers, and infrastructure from scratch", "courses": 6, "duration": "5 months", "icon": "☁️", "color": "#0F766E", "steps": ["Linux Basics", "AWS Core Services", "Docker", "CI/CD", "Monitoring", "Security Basics"] },
+  { "title": "Mobile App Developer", "description": "Create polished Android and iOS apps with modern tooling", "courses": 5, "duration": "4 months", "icon": "📱", "color": "#DB2777", "steps": ["JavaScript", "React Native", "Navigation", "State Management", "Publishing"] }
+]

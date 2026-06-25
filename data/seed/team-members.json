@@ -1,0 +1,8 @@
+[
+  { "name": "Dr. Priya Sharma", "role": "Head of AI Curriculum", "avatar": "PS", "bg": "#1D4ED8", "emoji": "🤖", "expertise": "Machine learning, neural networks, applied AI, and mentoring students into research and industry roles." },
+  { "name": "Rohan Mehta", "role": "Robotics Program Lead", "avatar": "RM", "bg": "#7C3AED", "emoji": "🦾", "expertise": "Autonomous systems, embedded programming, ROS, and hands-on robotics project delivery." },
+  { "name": "Anjali Kapoor", "role": "Full Stack Mentor", "avatar": "AK", "bg": "#059669", "emoji": "💻", "expertise": "React, Node.js, product thinking, and building scalable web applications end-to-end." },
+  { "name": "Vikram Singh", "role": "Data Science Lead", "avatar": "VS", "bg": "#DC2626", "emoji": "📊", "expertise": "Statistics, Python analytics, visualization, and model evaluation for real business datasets." },
+  { "name": "Meera Joshi", "role": "Cloud & DevOps Mentor", "avatar": "MJ", "bg": "#0F766E", "emoji": "☁️", "expertise": "Infrastructure basics, Docker, AWS, CI/CD, monitoring, and deployment workflows." },
+  { "name": "Nisha Verma", "role": "UI/UX Design Mentor", "avatar": "NV", "bg": "#DB2777", "emoji": "🎨", "expertise": "Wireframes, design systems, prototyping, and product-centered user experience design." }
+]

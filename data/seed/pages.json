@@ -1,0 +1,13 @@
+[
+  {
+    "slug": "home",
+    "type": "home-page",
+    "hero": {
+      "eyebrow": "India's #1 Tech Education Platform",
+      "title": "Build. Code. Innovate.",
+      "subtitle": "Master AI, Robotics, and Coding with world-class instructors. Join 1.2M+ students building the future of India."
+    },
+    "trustBar": ["Live mentorship", "Project-first learning", "Job-focused curriculum", "Certificate on completion"],
+    "featuredTracks": ["AI Engineer", "Robotics Engineer", "Cloud Engineer", "Full Stack Developer"]
+  }
+]

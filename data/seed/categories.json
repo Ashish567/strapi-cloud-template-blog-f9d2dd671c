@@ -1,0 +1,14 @@
+[
+  { "name": "Artificial Intelligence", "icon": "🤖", "count": 42, "color": "#1D4ED8" },
+  { "name": "Robotics", "icon": "🦾", "count": 28, "color": "#7C3AED" },
+  { "name": "Web Development", "icon": "💻", "count": 96, "color": "#059669" },
+  { "name": "Data Science", "icon": "📊", "count": 64, "color": "#DC2626" },
+  { "name": "IoT & Embedded", "icon": "🔌", "count": 31, "color": "#D97706" },
+  { "name": "Cybersecurity", "icon": "🔒", "count": 22, "color": "#0891B2" },
+  { "name": "Python Programming", "icon": "🐍", "count": 78, "color": "#16A34A" },
+  { "name": "Machine Learning", "icon": "🧠", "count": 55, "color": "#9333EA" },
+  { "name": "Cloud & DevOps", "icon": "☁️", "count": 36, "color": "#0F766E" },
+  { "name": "Mobile Development", "icon": "📱", "count": 29, "color": "#DB2777" },
+  { "name": "UI/UX Design", "icon": "🎨", "count": 24, "color": "#EA580C" },
+  { "name": "Blockchain", "icon": "⛓️", "count": 18, "color": "#4F46E5" }
+]

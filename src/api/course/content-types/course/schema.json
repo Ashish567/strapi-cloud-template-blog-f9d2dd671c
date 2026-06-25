@@ -80,6 +80,12 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::category.category"
+    },
+    "modules": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::module.module",
+      "mappedBy": "course"
     }
   }
 }
