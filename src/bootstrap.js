@@ -464,7 +464,7 @@ async function ensureDataSeeded() {
           await seedCurriculumForCourse(course.documentId);
         }
       }
-      return;
+      // Don't return — fall through to seed other content types that may be missing
     }
 
     console.log('Seeding learning platform data from strapi-import/data...');
@@ -567,86 +567,71 @@ async function ensureDataSeeded() {
 
     // 4. FAQs
     const faqsPath = path.join(importDir, 'faqs.json');
-    if (await fs.exists(faqsPath)) {
+    const existingFaqs = await strapi.documents('api::faq.faq').findMany({ limit: 1 });
+    if (await fs.exists(faqsPath) && (!existingFaqs || existingFaqs.length === 0)) {
       const faqs = await fs.readJson(faqsPath);
       for (const faq of faqs) {
         await strapi.documents('api::faq.faq').create({
-          data: {
-            question: faq.question,
-            answer: faq.answer,
-            publishedAt: new Date()
-          }
+          data: { question: faq.question, answer: faq.answer, publishedAt: new Date() }
         });
       }
+      console.log(`Seeded ${faqs.length} FAQs`);
     }
 
     // 5. Learning Paths
     const lpPath = path.join(importDir, 'learning-paths.json');
-    if (await fs.exists(lpPath)) {
+    const existingLPs = await strapi.documents('api::learning-path.learning-path').findMany({ limit: 1 });
+    if (await fs.exists(lpPath) && (!existingLPs || existingLPs.length === 0)) {
       const lps = await fs.readJson(lpPath);
       for (const lp of lps) {
         await strapi.documents('api::learning-path.learning-path').create({
           data: {
-            title: lp.title,
-            description: lp.description,
-            courses: lp.courses,
-            duration: lp.duration,
-            icon: lp.icon,
-            color: lp.color,
-            steps: lp.steps,
+            title: lp.title, description: lp.description, courses: lp.courses,
+            duration: lp.duration, icon: lp.icon, color: lp.color, steps: lp.steps,
             publishedAt: new Date()
           }
         });
       }
+      console.log(`Seeded ${lps.length} learning paths`);
     }
 
     // 6. Partners
     const partnersPath = path.join(importDir, 'partners.json');
-    if (await fs.exists(partnersPath)) {
+    const existingPartners = await strapi.documents('api::partner.partner').findMany({ limit: 1 });
+    if (await fs.exists(partnersPath) && (!existingPartners || existingPartners.length === 0)) {
       const partners = await fs.readJson(partnersPath);
       for (const partner of partners) {
         await strapi.documents('api::partner.partner').create({
-          data: {
-            companyName: partner.companyName,
-            publishedAt: new Date()
-          }
+          data: { companyName: partner.companyName, publishedAt: new Date() }
         });
       }
+      console.log(`Seeded ${partners.length} partners`);
     }
 
     // 7. Team Members
     const teamPath = path.join(importDir, 'team-members.json');
-    if (await fs.exists(teamPath)) {
+    const existingTeam = await strapi.documents('api::team-member.team-member').findMany({ limit: 1 });
+    if (await fs.exists(teamPath) && (!existingTeam || existingTeam.length === 0)) {
       const teams = await fs.readJson(teamPath);
       for (const team of teams) {
         await strapi.documents('api::team-member.team-member').create({
-          data: {
-            name: team.name,
-            designation: team.designation,
-            bg: team.bg,
-            bio: team.bio,
-            publishedAt: new Date()
-          }
+          data: { name: team.name, designation: team.designation, bg: team.bg, bio: team.bio, publishedAt: new Date() }
         });
       }
+      console.log(`Seeded ${teams.length} team members`);
     }
 
     // 8. Testimonials
     const testimonialsPath = path.join(importDir, 'testimonials.json');
-    if (await fs.exists(testimonialsPath)) {
+    const existingTestimonials = await strapi.documents('api::testimonial.testimonial').findMany({ limit: 1 });
+    if (await fs.exists(testimonialsPath) && (!existingTestimonials || existingTestimonials.length === 0)) {
       const testimonials = await fs.readJson(testimonialsPath);
       for (const test of testimonials) {
         await strapi.documents('api::testimonial.testimonial').create({
-          data: {
-            name: test.name,
-            role: test.role,
-            review: test.review,
-            rating: test.rating,
-            course: test.course,
-            publishedAt: new Date()
-          }
+          data: { name: test.name, role: test.role, review: test.review, rating: test.rating, course: test.course, publishedAt: new Date() }
         });
       }
+      console.log(`Seeded ${testimonials.length} testimonials`);
     }
 
     // 9. Pages (Home Page)
